@@ -1,0 +1,44 @@
+using UnityEngine;
+using TMPro;
+using System.Runtime.CompilerServices;
+using System.Collections;
+using System.Collections.Generic;
+
+public class Dialogue : MonoBehaviour
+{
+
+    public TextMeshProUGUI textComponent;
+    public string[] lines;
+    public float textSpeed;
+
+    private int index;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        textComponent.text = string.Empty;
+        StartDialogue();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void StartDialogue()
+    {
+        index = 0;
+        StartCoroutine(TypeLine());
+    }
+
+    IEnumerator TypeLine()
+    {
+        //Type each character 1 by 1
+        foreach (char c in lines[index].ToCharArray())
+        {
+            textComponent.text += c;
+            yield return new WaitForSeconds(textSpeed);
+        }
+    }
+}
