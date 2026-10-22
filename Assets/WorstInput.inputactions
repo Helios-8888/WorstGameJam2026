@@ -1,6 +1,57 @@
 {
-    "version": 0,
+    "version": 1,
     "name": "WorstInput",
-    "maps": [],
+    "maps": [
+        {
+            "name": "w9rst",
+            "id": "89457544-8ba8-40c4-aa15-d8fb03d47715",
+            "actions": [
+                {
+                    "name": "SelectLeft",
+                    "type": "Button",
+                    "id": "582b2638-f1dd-411c-b718-b6bc80cd56b5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Select Right",
+                    "type": "Button",
+                    "id": "7e8d8c3f-d922-4cad-9e52-57c8ece07fd0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ee5be546-8ab1-4a71-8606-270b10b5f45f",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0f81ec0d-4477-4388-81c8-51cebb598111",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
     "controlSchemes": []
 }
