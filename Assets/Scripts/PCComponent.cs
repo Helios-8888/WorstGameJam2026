@@ -1,8 +1,31 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 public class PCComponent : MonoBehaviour
 {
+    public enum ComponentType
+    {
+        GPU,
+        CPU,
+        SSD,
+        HDD,
+        USB,
+        MOBO,
+        Screw,
+        Wifi,
+        DVD,
+        Glowstick,
+        ROM,
+        RAM,
+        Power,
+        Fan,
+        Thermal,
+        Cable
+    }
+
+    public GameManager GameManager;
     public List<PCBit> BitsToAttach = new List<PCBit>();
+    public ComponentType ComponentType_;
     public string ComponentName;
     private Rigidbody2D rb;
     private float moveSpeed = 10f;
@@ -45,4 +68,18 @@ public class PCComponent : MonoBehaviour
             return true;
         }
     }
+
+    public void OnComponentClick()
+    {
+        GameManager.SelectedComponent = this;
+
+    }
+
+    public void MoveComponent(Vector2 direction)
+    {
+
+    }
+    
+
+
 }

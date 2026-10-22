@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class PCBit : MonoBehaviour
 {
-    public PCComponent Owner;
+    public PCComponent InsertedComponent;
+    public PCComponent.ComponentType DesiredCompoennt;
     public bool bAttached = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,9 +29,9 @@ public class PCBit : MonoBehaviour
     {
         if (_slot.bAvailable)
         {
-            _slot.AttachedComponent = Owner;
+            _slot.AttachedComponent = InsertedComponent;
             _slot.bAvailable = false;
-            Debug.Log($"Attached: {Owner.ComponentName} in slot {_slot.SlotID}");
+            Debug.Log($"Attached: {InsertedComponent.ComponentName} in slot {_slot.SlotID}");
             return true;
         }
         else
@@ -46,12 +47,12 @@ public class PCBit : MonoBehaviour
         {
             _slot.AttachedComponent = null;
             _slot.bAvailable = true;
-            Debug.Log($"Detached: {Owner.ComponentName} in slot {_slot.SlotID}");
+            Debug.Log($"Detached: {InsertedComponent.ComponentName} in slot {_slot.SlotID}");
             return true;
         }
         else
         {
-            Debug.Log($"Error. Slot {_slot.SlotID} already is already empty");
+            Debug.Log($"Error. Slot {_slot.SlotID} is already empty");
             return false;
         }
     }

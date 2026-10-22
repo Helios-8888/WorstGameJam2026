@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 1000974158}
   - component: {fileID: 1000974157}
   m_Layer: 5
-  m_Name: Test Bit
+  m_Name: Attachment Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
