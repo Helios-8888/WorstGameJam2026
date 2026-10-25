@@ -38,7 +38,7 @@ public class PCComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(Vector2.up * moveSpeed, ForceMode2D.Force);
+        //rb.AddForce(Vector2.up * moveSpeed, ForceMode2D.Force);
     }
 
 
@@ -77,7 +77,8 @@ public class PCComponent : MonoBehaviour
 
     public void MoveComponent(Vector2 direction)
     {
-
+        Debug.Log(direction.x + direction.y);
+        rb.AddForce(direction * moveSpeed, ForceMode2D.Force);
     }
     
 

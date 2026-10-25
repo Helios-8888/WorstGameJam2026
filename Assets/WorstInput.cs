@@ -117,7 +117,7 @@ public partial class @WorstInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ee5be546-8ab1-4a71-8606-270b10b5f45f"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -128,7 +128,7 @@ public partial class @WorstInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""0f81ec0d-4477-4388-81c8-51cebb598111"",
-                    ""path"": ""<Mouse>/rightButton"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
