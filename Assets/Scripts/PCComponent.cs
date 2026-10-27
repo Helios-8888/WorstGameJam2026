@@ -1,48 +1,132 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine.InputSystem;
 public class PCComponent : MonoBehaviour
 {
-    public List<PCBit> BitsToAttach = new List<PCBit>();
+    public enum ComponentType
+    {
+        GPU,
+        CPU,
+        SSD,
+        HDD,
+        USB,
+        MOBO,
+        Screw,
+        Wifi,
+        DVD,
+        Glowstick,
+        ROM,
+        RAM,
+        Power,
+        Fan,
+        Thermal,
+        Cable
+    }
+
+    public GameManager Gamemanager_;
+    public ComponentType ComponentType_;
     public string ComponentName;
+    public float moveSpeed = 10.0f;
+
+    [SerializeField]
+    private InputActionReference leftClickRef;
+    [SerializeField]
+    private InputActionReference rightClickRef;
     private Rigidbody2D rb;
-    private float moveSpeed = 10f;
+    private bool bSelected = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        bSelected = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce(Vector2.up * moveSpeed, ForceMode2D.Force);
+        if (leftClickRef.action.WasPerformedThisFrame())
+        {
+            Vector2 pos = Mouse.current.position.ReadValue();
+            Vector2 direction = (pos - rb.position).normalized;
+            if (bSelected)
+                MoveComponent(direction);
+        }
+        if (rightClickRef.action.WasPerformedThisFrame())
+        {
+            bSelected = false;
+        }
     }
 
 
-    public bool TryAttachComponent()
+    public void MoveComponent(Vector2 direction)
     {
-        int numAttachedBits = 0;
-        foreach (PCBit bit in BitsToAttach)
+        Debug.Log(direction.x + direction.y);
+        rb.AddForce(direction * moveSpeed, ForceMode2D.Impulse);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Collision");
+        if (collision.CompareTag("BoardSlot") && collision.TryGetComponent(out BoardSlot _slot))
         {
-            if (bit.bAttached)
+            TryAttachComponent(_slot);
+        }
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log("Collision");
+        if (collision.CompareTag("BoardSlot") && collision.TryGetComponent(out BoardSlot _slot))
+        {
+            TryDetachComponent(_slot);
+        }
+    }
+
+
+    public void OnSelectComponent()
+    {
+        bSelected = true;
+    }
+    public bool TryAttachComponent(BoardSlot _slot)
+    {
+        if (_slot.bAvailable)
+        {
+            _slot.AttachedComponent = this;
+            _slot.bAvailable = false;
+            Debug.Log($"Attached: {ComponentName} in slot {_slot.SlotID}");
+            if (_slot.DesiredCompoennt == this.ComponentType_)
             {
-                numAttachedBits++;
+                _slot.bCorrectComponent = true;
             }
-
-        }
-
-        if (numAttachedBits < BitsToAttach.Count)
-        {
-            // Component not fully attached
-            // Play error sound effect
-            return false;
-        }
-
-        else
-        {
-            //Component fully attached
-            //Play attached sound effect
+            Gamemanager_.CheckSlots();
             return true;
         }
+        else
+        {
+            Debug.Log($"Could not attach. Slot {_slot.SlotID} already has {_slot.AttachedComponent.ComponentName} attached");
+            return false;
+        }
     }
+
+    public bool TryDetachComponent(BoardSlot _slot)
+    {
+        if (!_slot.bAvailable)
+        {
+            _slot.AttachedComponent = null;
+            _slot.bAvailable = true;
+            Debug.Log($"Detached: {ComponentName} in slot {_slot.SlotID}");
+            _slot.bCorrectComponent = false;
+            Gamemanager_.CheckSlots();
+            return true;
+        }
+        else
+        {
+            Debug.Log($"Error. Slot {_slot.SlotID} is already empty");
+            return false;
+        }
+    }
+
 }
