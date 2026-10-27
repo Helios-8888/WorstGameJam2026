@@ -24,28 +24,38 @@ public class PCComponent : MonoBehaviour
         Cable
     }
 
+    public GameManager Gamemanager_;
     public ComponentType ComponentType_;
     public string ComponentName;
-    public float moveSpeed = 100.0f;
+    public float moveSpeed = 10.0f;
 
     [SerializeField]
-    private InputActionReference clickRef;
+    private InputActionReference leftClickRef;
+    [SerializeField]
+    private InputActionReference rightClickRef;
     private Rigidbody2D rb;
-
+    private bool bSelected = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        bSelected = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (clickRef.action.WasPerformedThisFrame())
+        if (leftClickRef.action.WasPerformedThisFrame())
         {
             Vector2 pos = Mouse.current.position.ReadValue();
             Vector2 direction = (pos - rb.position).normalized;
-            MoveComponent(direction);
+            if (bSelected)
+                MoveComponent(direction);
+        }
+        if (rightClickRef.action.WasPerformedThisFrame())
+        {
+            bSelected = false;
         }
     }
 
@@ -75,6 +85,11 @@ public class PCComponent : MonoBehaviour
         }
     }
 
+
+    public void OnSelectComponent()
+    {
+        bSelected = true;
+    }
     public bool TryAttachComponent(BoardSlot _slot)
     {
         if (_slot.bAvailable)
@@ -82,6 +97,11 @@ public class PCComponent : MonoBehaviour
             _slot.AttachedComponent = this;
             _slot.bAvailable = false;
             Debug.Log($"Attached: {ComponentName} in slot {_slot.SlotID}");
+            if (_slot.DesiredCompoennt == this.ComponentType_)
+            {
+                _slot.bCorrectComponent = true;
+            }
+            Gamemanager_.CheckSlots();
             return true;
         }
         else
@@ -98,6 +118,8 @@ public class PCComponent : MonoBehaviour
             _slot.AttachedComponent = null;
             _slot.bAvailable = true;
             Debug.Log($"Detached: {ComponentName} in slot {_slot.SlotID}");
+            _slot.bCorrectComponent = false;
+            Gamemanager_.CheckSlots();
             return true;
         }
         else
