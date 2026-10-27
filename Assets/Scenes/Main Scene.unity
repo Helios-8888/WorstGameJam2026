@@ -415,9 +415,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.3735848, g: 0.36583117, b: 0.36583117, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.20774262, g: 0.7584905, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.096613504, g: 0.3207547, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.5032397, g: 1, b: 0.1716981, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1059,6 +1059,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestComponent (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6664830551120294203, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: m_Size.x
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664830551120294203, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: m_Size.y
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664830551120294203, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
       propertyPath: moveSpeed
       value: 7
@@ -1194,6 +1206,18 @@ PrefabInstance:
     - target: {fileID: 3355721272419268794, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
       propertyPath: m_Name
       value: TestComponent (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664830551120294203, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: m_Size.x
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664830551120294203, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: m_Size.y
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664830551120294203, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
       propertyPath: Gamemanager_
@@ -1585,6 +1609,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestComponent (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6664830551120294203, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: m_Size.x
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664830551120294203, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: m_Size.y
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664830551120294203, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
       propertyPath: moveSpeed
       value: 20
@@ -1679,7 +1715,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.31190932, g: 0.20758267, b: 0.9245283, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1882,9 +1918,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.7509433, g: 0.145938, b: 0.145938, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 0.41320753, b: 0.41320753, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2237,6 +2273,10 @@ PrefabInstance:
     - target: {fileID: 6664830551120294203, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
       propertyPath: m_Size.y
       value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664830551120294203, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
       propertyPath: moveSpeed
