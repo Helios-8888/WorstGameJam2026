@@ -38,6 +38,7 @@ public class PCComponent : MonoBehaviour
 
     // Audio
     private AudioSource ComponentSource;
+    public AudioClip[] AudioClips;
     public AudioClip selectionClip;
     public AudioClip attachmentClip;
 
@@ -60,6 +61,7 @@ public class PCComponent : MonoBehaviour
             {
                 MoveComponent(direction);
                 ComponentSource.PlayOneShot(selectionClip);
+                ComponentSource.PlayOneShot(AudioClips[Random.Range(0, AudioClips.Length + 1)]);
             }
         }
         if (rightClickRef.action.WasPerformedThisFrame())

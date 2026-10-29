@@ -2288,7 +2288,7 @@ PrefabInstance:
     - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
       propertyPath: selectionClip
       value: 
-      objectReference: {fileID: 8300000, guid: 8662c88ce3289eb4da1ecebc50f07d6f, type: 3}
+      objectReference: {fileID: 8300000, guid: 61feed901f2cc964aa85b7220e7b708d, type: 3}
     - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
       propertyPath: attachmentClip
       value: 
