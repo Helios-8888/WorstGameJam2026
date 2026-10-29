@@ -61,11 +61,12 @@ public class PCComponent : MonoBehaviour
             {
                 MoveComponent(direction);
                 ComponentSource.PlayOneShot(selectionClip);
-                ComponentSource.PlayOneShot(AudioClips[Random.Range(0, AudioClips.Length + 1)]);
+                ComponentSource.PlayOneShot(AudioClips[Random.Range(0, AudioClips.Length)]);
             }
         }
         if (rightClickRef.action.WasPerformedThisFrame())
         {
+            ComponentSource.PlayOneShot(AudioClips[Random.Range(0, AudioClips.Length)]);
             bSelected = false;
         }
     }
