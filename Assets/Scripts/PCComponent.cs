@@ -109,9 +109,16 @@ public class PCComponent : MonoBehaviour
             _slot.AttachedComponent = this;
             _slot.bAvailable = false;
             Debug.Log($"Attached: {ComponentName} in slot {_slot.SlotID}");
-            if (_slot.DesiredCompoennt == this.ComponentType_)
+            if (_slot.DesiredComponent == this.ComponentType_)
             {
-                _slot.bCorrectComponent = true;
+                for (int i = 0; i< Gamemanager_.MissingComponents.Count; i++)
+                {
+                    if (_slot.DesiredComponent == Gamemanager_.MissingComponents[i])
+                    {
+                        _slot.bCorrectComponent = true;
+                        Gamemanager_.MissingComponents.Remove(_slot.DesiredComponent);
+                    }
+                }
                 ComponentSource.PlayOneShot(attachmentClip);
             }
             Gamemanager_.CheckSlots();
