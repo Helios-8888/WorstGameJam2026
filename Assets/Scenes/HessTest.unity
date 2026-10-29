@@ -2288,11 +2288,75 @@ PrefabInstance:
     - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
       propertyPath: selectionClip
       value: 
-      objectReference: {fileID: 8300000, guid: 61feed901f2cc964aa85b7220e7b708d, type: 3}
+      objectReference: {fileID: 8300000, guid: 4f6e5dbd1cae294439b2240813e2a5e5, type: 3}
     - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
       propertyPath: attachmentClip
       value: 
+      objectReference: {fileID: 8300000, guid: a24c2e2f96870f8448f8bbcd37015c5e, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: AudioClips.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[0]'
+      value: 
       objectReference: {fileID: 8300000, guid: 4f6e5dbd1cae294439b2240813e2a5e5, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 61feed901f2cc964aa85b7220e7b708d, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9828f1d6b2bdfb9448350a9f37e765d9, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b49cf53f6936195498a39d8e7c08867e, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 8662c88ce3289eb4da1ecebc50f07d6f, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: a661963fb4b4f484f8209b452dceb304, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 3eb8f00d92c7b2940b2ee468638c32f6, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8300000, guid: a24c2e2f96870f8448f8bbcd37015c5e, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[8]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 19e4b4d6cfb3c9c49a7c120acff03ba6, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[9]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 063a00156e235374c90cfe2cb9426b33, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[10]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f7d3043a96a512408737187ca46fdd9, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[11]'
+      value: 
+      objectReference: {fileID: 8300000, guid: cefb487a209d2ef40b05e81b2b1b333c, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[12]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 13b0cdcef0553ab418e7f2a29c7e4548, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[13]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 20d55d45ca461fb4a86aaa6174ad3834, type: 3}
+    - target: {fileID: 8452161601218701630, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+      propertyPath: 'AudioClips.Array.data[14]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 3ddf07ef4c63dad44813cdfd0a3b9510, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
