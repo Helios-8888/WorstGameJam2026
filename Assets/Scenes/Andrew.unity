@@ -405,6 +405,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1676241009}
     m_Modifications:
+    - target: {fileID: 3703295643087900191, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: 'lines.Array.data[0]'
+      value: hello
+      objectReference: {fileID: 0}
     - target: {fileID: 7498681551582228954, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
       propertyPath: m_Name
       value: DialogueBox
