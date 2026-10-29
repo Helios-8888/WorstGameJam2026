@@ -35,12 +35,18 @@ public class PCComponent : MonoBehaviour
     private InputActionReference rightClickRef;
     private Rigidbody2D rb;
     private bool bSelected = false;
+
+    // Audio
+    private AudioSource ComponentSource;
+    public AudioClip selectionClip;
+    public AudioClip attachmentClip;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         bSelected = false;
-
+        ComponentSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,7 +57,10 @@ public class PCComponent : MonoBehaviour
             Vector2 pos = Mouse.current.position.ReadValue();
             Vector2 direction = (pos - rb.position).normalized;
             if (bSelected)
+            {
                 MoveComponent(direction);
+                ComponentSource.PlayOneShot(selectionClip);
+            }
         }
         if (rightClickRef.action.WasPerformedThisFrame())
         {
@@ -100,6 +109,7 @@ public class PCComponent : MonoBehaviour
             if (_slot.DesiredCompoennt == this.ComponentType_)
             {
                 _slot.bCorrectComponent = true;
+                ComponentSource.PlayOneShot(attachmentClip);
             }
             Gamemanager_.CheckSlots();
             return true;
