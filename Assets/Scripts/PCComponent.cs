@@ -121,7 +121,6 @@ public class PCComponent : MonoBehaviour
                 }
                 ComponentSource.PlayOneShot(attachmentClip);
             }
-            Gamemanager_.CheckSlots();
             return true;
         }
         else
@@ -139,7 +138,6 @@ public class PCComponent : MonoBehaviour
             _slot.bAvailable = true;
             Debug.Log($"Detached: {ComponentName} in slot {_slot.SlotID}");
             _slot.bCorrectComponent = false;
-            Gamemanager_.CheckSlots();
             return true;
         }
         else
