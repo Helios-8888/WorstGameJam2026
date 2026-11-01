@@ -1250,14 +1250,14 @@ MonoBehaviour:
   - {fileID: 1090673578}
   - {fileID: 2053180330}
   MissingComponents: 
-<<<<<<< HEAD
-=======
+
+
   GameAudioSource: {fileID: 0}
   WinClip: {fileID: 0}
   LoseClip: {fileID: 0}
   WinTransform: {fileID: 0}
   LoseTransform: {fileID: 0}
->>>>>>> main
+
 --- !u!4 &994225748
 Transform:
   m_ObjectHideFlags: 0
