@@ -60,13 +60,13 @@ public class PCComponent : MonoBehaviour
             if (bSelected)
             {
                 MoveComponent(direction);
-                ComponentSource.PlayOneShot(selectionClip);
-                ComponentSource.PlayOneShot(AudioClips[Random.Range(0, AudioClips.Length)]);
+                Gamemanager_.GameAudioSource.PlayOneShot(selectionClip);
+                Gamemanager_.GameAudioSource.PlayOneShot(AudioClips[Random.Range(0, AudioClips.Length)]);
             }
         }
         if (rightClickRef.action.WasPerformedThisFrame())
         {
-            ComponentSource.PlayOneShot(AudioClips[Random.Range(0, AudioClips.Length)]);
+            Gamemanager_.GameAudioSource.PlayOneShot(AudioClips[Random.Range(0, AudioClips.Length)]);
             bSelected = false;
         }
     }
@@ -113,7 +113,7 @@ public class PCComponent : MonoBehaviour
             {
                 for (int i = 0; i< Gamemanager_.MissingComponents.Count; i++)
                 {
-                    if (_slot.DesiredComponent == Gamemanager_.MissingComponents[i])
+                    if (this.ComponentType_ == Gamemanager_.MissingComponents[i])
                     {
                         _slot.bCorrectComponent = true;
                         Gamemanager_.MissingComponents.Remove(_slot.DesiredComponent);
@@ -121,7 +121,6 @@ public class PCComponent : MonoBehaviour
                 }
                 ComponentSource.PlayOneShot(attachmentClip);
             }
-            Gamemanager_.CheckSlots();
             return true;
         }
         else
@@ -138,8 +137,9 @@ public class PCComponent : MonoBehaviour
             _slot.AttachedComponent = null;
             _slot.bAvailable = true;
             Debug.Log($"Detached: {ComponentName} in slot {_slot.SlotID}");
+            if (_slot.bCorrectComponent)
+                Gamemanager_.MissingComponents.Add(ComponentType_);
             _slot.bCorrectComponent = false;
-            Gamemanager_.CheckSlots();
             return true;
         }
         else
