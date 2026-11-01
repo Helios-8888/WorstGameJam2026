@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 {
     //Stretch goals
     // speed running timer
-
+    // audio settings
+    // Teach the player the controls
 
     //public PCComponent SelectedComponent;
     public List<BoardSlot> Slots = new List<BoardSlot>();
@@ -39,19 +40,22 @@ public class GameManager : MonoBehaviour
     {
         if (MissingComponents.Count == 0 && Slots.Count > 0)
         {
+            Debug.Log("You Win.");
             GameAudioSource.PlayOneShot(WinClip);
             WinTransform.gameObject.SetActive(true);
             // Play some dialogue
             // Enable a back to main menu button
-            BackButton.gameObject.SetActive(false);
+            BackButton.gameObject.SetActive(true);
         }
         else
         {
+
+            Debug.Log("You Lose.");
             GameAudioSource.PlayOneShot(LoseClip);
             LoseTransform.gameObject.SetActive(true);
             // Play some dialogue
             // Enable a back to main menu button
-            BackButton.gameObject.SetActive(false);
+            BackButton.gameObject.SetActive(true);
 
         }
 

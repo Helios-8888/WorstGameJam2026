@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 063a00156e235374c90cfe2cb9426b33, type: 3}
     - target: {fileID: 1123456068045963447, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_Name
-      value: ButtonComponent Variant
+      value: RAM
       objectReference: {fileID: 0}
     - target: {fileID: 6046318172745674992, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_text
@@ -126,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 189.77379
+      value: 197
       objectReference: {fileID: 0}
     - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -144,7 +144,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7652686996956808728, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
