@@ -69,6 +69,8 @@ public class Dialogue : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+
+        
        
         // when a component is placed skip to next dialogue element
         // to test I should add a way of skipping with a key press.
