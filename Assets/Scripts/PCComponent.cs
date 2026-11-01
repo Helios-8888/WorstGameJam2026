@@ -35,12 +35,19 @@ public class PCComponent : MonoBehaviour
     private InputActionReference rightClickRef;
     private Rigidbody2D rb;
     private bool bSelected = false;
+
+    // Audio
+    private AudioSource ComponentSource;
+    public AudioClip[] AudioClips;
+    public AudioClip selectionClip;
+    public AudioClip attachmentClip;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         bSelected = false;
-
+        ComponentSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,10 +58,15 @@ public class PCComponent : MonoBehaviour
             Vector2 pos = Mouse.current.position.ReadValue();
             Vector2 direction = (pos - rb.position).normalized;
             if (bSelected)
+            {
                 MoveComponent(direction);
+                ComponentSource.PlayOneShot(selectionClip);
+                ComponentSource.PlayOneShot(AudioClips[Random.Range(0, AudioClips.Length)]);
+            }
         }
         if (rightClickRef.action.WasPerformedThisFrame())
         {
+            ComponentSource.PlayOneShot(AudioClips[Random.Range(0, AudioClips.Length)]);
             bSelected = false;
         }
     }
@@ -97,9 +109,17 @@ public class PCComponent : MonoBehaviour
             _slot.AttachedComponent = this;
             _slot.bAvailable = false;
             Debug.Log($"Attached: {ComponentName} in slot {_slot.SlotID}");
-            if (_slot.DesiredCompoennt == this.ComponentType_)
+            if (_slot.DesiredComponent == this.ComponentType_)
             {
-                _slot.bCorrectComponent = true;
+                for (int i = 0; i< Gamemanager_.MissingComponents.Count; i++)
+                {
+                    if (_slot.DesiredComponent == Gamemanager_.MissingComponents[i])
+                    {
+                        _slot.bCorrectComponent = true;
+                        Gamemanager_.MissingComponents.Remove(_slot.DesiredComponent);
+                    }
+                }
+                ComponentSource.PlayOneShot(attachmentClip);
             }
             Gamemanager_.CheckSlots();
             return true;
