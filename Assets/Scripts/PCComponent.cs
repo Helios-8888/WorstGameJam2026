@@ -137,6 +137,8 @@ public class PCComponent : MonoBehaviour
             _slot.AttachedComponent = null;
             _slot.bAvailable = true;
             Debug.Log($"Detached: {ComponentName} in slot {_slot.SlotID}");
+            if (_slot.bCorrectComponent)
+                Gamemanager_.MissingComponents.Add(ComponentType_);
             _slot.bCorrectComponent = false;
             return true;
         }
