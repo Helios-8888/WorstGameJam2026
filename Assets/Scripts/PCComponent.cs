@@ -37,7 +37,6 @@ public class PCComponent : MonoBehaviour
     private bool bSelected = false;
 
     // Audio
-    private AudioSource ComponentSource;
     public AudioClip[] AudioClips;
     public AudioClip selectionClip;
     public AudioClip attachmentClip;
@@ -47,7 +46,6 @@ public class PCComponent : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         bSelected = false;
-        ComponentSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -67,7 +65,8 @@ public class PCComponent : MonoBehaviour
         if (rightClickRef.action.WasPerformedThisFrame())
         {
             Gamemanager_.GameAudioSource.PlayOneShot(AudioClips[Random.Range(0, AudioClips.Length)]);
-            bSelected = false;
+            if (bSelected)
+                bSelected = false;
         }
     }
 
@@ -119,7 +118,7 @@ public class PCComponent : MonoBehaviour
                         Gamemanager_.MissingComponents.Remove(_slot.DesiredComponent);
                     }
                 }
-                ComponentSource.PlayOneShot(attachmentClip);
+                Gamemanager_.GameAudioSource.PlayOneShot(attachmentClip);
             }
             return true;
         }

@@ -29,9 +29,17 @@ PrefabInstance:
       value: CPU
       objectReference: {fileID: 0}
     - target: {fileID: 256236771386486658, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
+      propertyPath: selectionClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cefb487a209d2ef40b05e81b2b1b333c, type: 3}
+    - target: {fileID: 256236771386486658, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: ComponentType_
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 256236771386486658, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
+      propertyPath: attachmentClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3ddf07ef4c63dad44813cdfd0a3b9510, type: 3}
     - target: {fileID: 1123456068045963447, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_Name
       value: CPU Variant
@@ -66,11 +74,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 160
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.9090908
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.9090908
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.9090908
       objectReference: {fileID: 0}
     - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -90,23 +110,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 106
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 19
+      value: -366
       objectReference: {fileID: 0}
     - target: {fileID: 8289199778896230195, guid: fc224b9e90d926549adbb814e77ff94b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
