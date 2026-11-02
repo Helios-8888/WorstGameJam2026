@@ -104,8 +104,8 @@ public class PCComponent : MonoBehaviour
     {
         if (_slot.bAvailable)
         {
-            _slot.AttachedComponent = this;
             _slot.bAvailable = false;
+            _slot.AttachedComponent = this;
             Debug.Log($"Attached: {ComponentName} in slot {_slot.SlotID}");
             if (_slot.DesiredComponent == this.ComponentType_)
             {
@@ -132,11 +132,11 @@ public class PCComponent : MonoBehaviour
     {
         if (!_slot.bAvailable)
         {
-            _slot.bAvailable = true;
             Debug.Log($"Detached: {ComponentName} in slot {_slot.SlotID}");
-            if (_slot.bCorrectComponent)
+            if (_slot.DesiredComponent == ComponentType_ && _slot.bCorrectComponent)
                 Gamemanager_.MissingComponents.Add(ComponentType_);
             _slot.AttachedComponent = null;
+            _slot.bAvailable = true;
             _slot.bCorrectComponent = false;
             return true;
         }
