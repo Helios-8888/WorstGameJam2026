@@ -41,21 +41,21 @@ public class GameManager : MonoBehaviour
         if (MissingComponents.Count == 0 && Slots.Count > 0)
         {
             Debug.Log("You Win.");
-            GameAudioSource.PlayOneShot(WinClip);
             WinTransform.gameObject.SetActive(true);
             // Play some dialogue
             // Enable a back to main menu button
             BackButton.gameObject.SetActive(true);
+            GameAudioSource.PlayOneShot(WinClip);
         }
         else
         {
 
             Debug.Log("You Lose.");
-            GameAudioSource.PlayOneShot(LoseClip);
             LoseTransform.gameObject.SetActive(true);
             // Play some dialogue
             // Enable a back to main menu button
             BackButton.gameObject.SetActive(true);
+            GameAudioSource.PlayOneShot(LoseClip);
 
         }
 
