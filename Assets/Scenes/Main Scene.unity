@@ -356,6 +356,7 @@ RectTransform:
   - {fileID: 120494592}
   - {fileID: 1110926487}
   - {fileID: 1984037456}
+  - {fileID: 1345756949}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -451,6 +452,167 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &552353310
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 395231986}
+    m_Modifications:
+    - target: {fileID: 3703295643087900191, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: lines.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703295643087900191, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: 'lines.Array.data[0]'
+      value: Hi dear, I want you to build a computer for me. :)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703295643087900191, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: 'lines.Array.data[1]'
+      value: 'Try put the CPU in right place '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703295643087900191, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: 'lines.Array.data[2]'
+      value: 'How about you now try put the RAM in the right position '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703295643087900191, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: 'lines.Array.data[3]'
+      value: 'Next try put the SSD in the right place and screw it in '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703295643087900191, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: 'lines.Array.data[4]'
+      value: 'Now put a small amount of Thermal Paste. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703295643087900191, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: 'lines.Array.data[5]'
+      value: 'Have a go at putting the GPU in the right position '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703295643087900191, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: 'lines.Array.data[6]'
+      value: 'Put the power supply where it belongs '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703295643087900191, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: 'lines.Array.data[7]'
+      value: "Why don\u2019t you try placing the Wi-Fi in its slot "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703295643087900191, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: 'lines.Array.data[8]'
+      value: 'Now screw the Fans where it should be  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498681551582228954, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_Name
+      value: DialogueBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447897956601393056, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447897956601393056, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447897956601393056, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -234
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -2120
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1790.0779
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3079019
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3079019
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3079019
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.342163
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -76.951965
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
 --- !u!1 &555820690 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3355721272419268794, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
@@ -1088,11 +1250,14 @@ MonoBehaviour:
   - {fileID: 1090673578}
   - {fileID: 2053180330}
   MissingComponents: 
+
+
   GameAudioSource: {fileID: 0}
   WinClip: {fileID: 0}
   LoseClip: {fileID: 0}
   WinTransform: {fileID: 0}
   LoseTransform: {fileID: 0}
+
 --- !u!4 &994225748
 Transform:
   m_ObjectHideFlags: 0
@@ -1456,6 +1621,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 414897312}
   m_SourcePrefab: {fileID: 100100000, guid: a1e373d59a6a5b24da081a70f2fa3fec, type: 3}
+--- !u!224 &1345756949 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 9021942173805087758, guid: 70eb4b6ffc2379148b5d82d608995670, type: 3}
+  m_PrefabInstance: {fileID: 552353310}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1346878497
 GameObject:
   m_ObjectHideFlags: 0
